@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesan Mie Ayam Pak Nur</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="menu.html">Menu</a> <!-- Tambahkan link ke menu.html -->
+        <a href="contact.html">Contact</a> <!-- Tambahkan link ke contact.html -->
+    </div>
+
+    <h1>Pesan Mie Ayam Pak Nur</h1>
+
+    <form id="orderForm" onsubmit="submitOrder(event)">
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="pilihanMie">Pilihan Mie:</label><br>
+        <select id="pilihanMie" name="pilihanMie" required>
+            <option value="0">-- Pilih Menu --</option>
+            <option value="17000">Mie Ayam Bakso - Rp. 17.000</option>
+            <option value="20000">Mie Ayam Bakso Pangsit - Rp. 20.000</option>
+            <option value="15000">Mie Ayam Pangsit - Rp. 15.000</option>
+            <option value="16000">Mie Ayam Pecel - Rp. 16.000</option>
+        </select><br>
+
+        <label for="jumlah">Jumlah Porsi:</label><br>
+        <input type="number" id="jumlah" name="jumlah" required><br>
+
+        <label for="keterangan">Keterangan:</label><br>
+        <input type="text" id="keterangan" name="keterangan"><br>
+
+        <button type="submit">Pesan</button>
+    </form>
+
+    <div id="message" class="message"></div>
+
+    <div id="popup">
+        <h3>Terima kasih telah memesan!</h3>
+        <p id="popup-message"></p>
+        <button class="close-btn" onclick="closePopup()">Tutup</button>
+    </div>
+
+</html>
